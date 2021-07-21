@@ -1,6 +1,7 @@
 {
   "name": "yahtzee",
   "version": "0.1.0",
+  "homepage": "http://monikageiger.github.io/yahtzee-game-react",
   "private": true,
   "dependencies": {
     "react": "^16.4.1",
@@ -9,6 +10,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -16,6 +19,7 @@
   "devDependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "enzyme-to-json": "^3.3.5"
+    "enzyme-to-json": "^3.3.5",
+    "gh-pages": "^3.2.3"
   }
 }
