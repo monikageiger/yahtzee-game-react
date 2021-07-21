@@ -4,6 +4,7 @@
   "homepage": "http://monikageiger.github.io/yahtzee-game-react",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
