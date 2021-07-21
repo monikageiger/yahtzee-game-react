@@ -11,7 +11,9 @@ class Game extends Component {
     super(props);
     this.state = {
       dice: Array.from({ length: NUM_DICE }),
+      // Array[undefined, undefined, undefined, undefined, undefined]
       locked: Array(NUM_DICE).fill(false),
+      // // Array [false, false, false, false, false]
       rollsLeft: NUM_ROLLS,
       scores: {
         ones: undefined,
@@ -27,10 +29,12 @@ class Game extends Component {
         largeStraight: undefined,
         yahtzee: undefined,
         chance: undefined
-      }
+      },
+
     };
     this.roll = this.roll.bind(this);
     this.doScore = this.doScore.bind(this);
+    this.toggleLocked = this.toggleLocked.bind(this);
   }
 
   roll(evt) {
@@ -44,23 +48,29 @@ class Game extends Component {
     }));
   }
 
+
+        // // Array [false, false, false, false, false]
   toggleLocked(idx) {
     // toggle whether idx is in locked or not
     this.setState(st => ({
+      
       locked: [
         ...st.locked.slice(0, idx),
         !st.locked[idx],
         ...st.locked.slice(idx + 1)
       ]
     }));
+    console.log(this.state.locked)
   }
 
   doScore(rulename, ruleFn) {
+     console.log("do score is called")
     // evaluate this ruleFn with the dice and score this rulename
     this.setState(st => ({
       scores: { ...st.scores, [rulename]: ruleFn(this.state.dice) },
       rollsLeft: NUM_ROLLS,
-      locked: Array(NUM_DICE).fill(false)
+      locked: Array(NUM_DICE).fill(false),
+      disabled: true
     }));
     this.roll();
   }
@@ -88,7 +98,7 @@ class Game extends Component {
             </div>
           </section>
         </header>
-        <ScoreTable doScore={this.doScore} scores={this.state.scores} />
+        <ScoreTable doScore={this.doScore} scores={this.state.scores} disabled={this.state.disabled} />
       </div>
     );
   }
