@@ -14,7 +14,18 @@
   font-weight: bold;
   display: flex;
   font-size: 5rem;
-  /* width: 50%; */
   justify-content: center;
 
+}
+
+@media only screen and (max-height: 1001px) {
+  .App {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-height: 1001px) {
+  .App {
+    height: 100%;
+  }
 }
