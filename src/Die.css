@@ -28,13 +28,15 @@
   opacity: 0.8;
 }
 
-.Die-rolling {
-  animation: spin 1s ease-out;
-}
 
 .Die-rolling:hover,
 .Die[disabled] {
   cursor: not-allowed;
+}
+
+
+.Die-rolling {
+  animation: spin 1s ease-out;
 }
 
 @keyframes spin {
