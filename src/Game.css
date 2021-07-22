@@ -1,8 +1,8 @@
 .Game {
   background: white;
+  border-radius: 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
-  margin: 0;
-
+  margin: 20px 0px;
 }
 
 
@@ -11,6 +11,7 @@ h2 {
   font-size: 2em;
   border-bottom: 2px solid purple;
   display: inline-block;
+
 }
 
 .Game-dice-section {
@@ -75,6 +76,8 @@ h2 {
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
+  border-radius: 20px 20px 0px 0px;
+  padding-top: 20px;
 }
 
 @keyframes Gradient {
@@ -94,6 +97,7 @@ h2 {
 @media only screen and (max-width: 1000px) {
   .game {
     width: 100%;
+
 
   }
 }

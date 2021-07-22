@@ -1,10 +1,10 @@
 .Dice {
   margin: 1em;
   display: flex;
-
   justify-content: center;
   align-content: center;
   align-self: center;
   align-items: center;
+
 
 }
